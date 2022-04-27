@@ -37,7 +37,7 @@ jobs:
         run: >-
           git archive
           --prefix="${release_id}/"
-          --ouptut="${release_id}.tar.gz"
+          --output="${release_id}.tar.gz"
           "${release_version}"
 
       - name: Deliver build products to GitHub Releases
