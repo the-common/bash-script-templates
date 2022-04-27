@@ -38,9 +38,6 @@ MD032: False
 # Allow using raw HTML markups as workarounds of deficiencies of Markdown
 MD033: False
 
-# 佔位字是要被替換掉的，為此規則之特例
-MD036: false
-
 # Allow using YAML front matter, while not require the definition of the
 # `title` property
 MD041:
