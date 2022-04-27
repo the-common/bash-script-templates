@@ -1,0 +1,46 @@
+# Release product and its build products
+#
+# 編輯參考：
+#
+# * Workflow syntax for GitHub Actions - GitHub Docs
+#   https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
+#
+# Copyright 2022 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
+# SPDX-License-Identifier: CC-BY-SA-4.0
+name: Release product and its build products
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    name: Release product and its build products
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Fetch contents from repository
+        uses: actions/checkout@v2
+
+      - name: Determine project ID
+        run: printf "project_id"=${GITHUB_REPOSITORY##*/}\\n" >> $GITHUB_ENV
+
+      - name: Determine release tag
+        run: printf "release_tag=${GITHUB_REF##*/}\\n" >> $GITHUB_ENV
+
+      - name: Determine release version
+        run: printf "release_version=${release_tag#v}\\n" >> $GITHUB_ENV
+
+      - name: Determine release ID
+        run: printf "release_id=${project_id}-${release_version}\\n" >> $GITHUB_ENV
+
+      - name: Build release archive
+        run: >-
+          git archive
+          --prefix="${release_id}/"
+          --ouptut="${release_id}.tar.gz"
+          "${release_version}"
+
+      - name: Deliver build products to GitHub Releases
+        uses: softprops/action-gh-release@v0.1.13
+        files: |
+          ${{ env.release_id }}.tar*
