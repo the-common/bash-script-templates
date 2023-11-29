@@ -42,7 +42,7 @@ repos:
   # Check REUSE compliance
   # https://reuse.software/
   - repo: https://github.com/fsfe/reuse-tool
-    rev: v0.12.1
+    rev: v1.0.0
     hooks:
       - id: reuse
 
@@ -51,13 +51,13 @@ repos:
   # https://www.shellcheck.net/
   # https://github.com/jumanjihouse/pre-commit-hooks#shellcheck
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: 2.1.5
+    rev: 3.0.0
     hooks:
       - id: shellcheck
 
   # Check YAML files
   # https://github.com/adrienverge/yamllint
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.26.1
+    rev: v1.30.0
     hooks:
       - id: yamllint
