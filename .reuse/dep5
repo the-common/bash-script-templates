@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: The Common GNU Bash Shell Script Templates
-Upstream-Contact: The Common GNU Bash Shell Script Templates's project issue tracker <https://github.com/the-common/bash-script-templates/issues>
-Source: https://github.com/the-common/bash-script-templates
+Upstream-Contact: The Common GNU Bash Shell Script Templates's project issue tracker <https://gitlab.com/the-common/bash-script-templates/-/issues>
+Source: https://gitlab.com/the-common/bash-script-templates
 
 Files:
  *README.md
