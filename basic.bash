@@ -7,8 +7,7 @@
 set \
     -o errexit \
     -o errtrace \
-    -o nounset \
-    -o pipefail
+    -o nounset
 
 required_commands=(
     realpath
