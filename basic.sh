@@ -30,14 +30,14 @@ for command in "${required_commands[@]}"; do
     if ! command -v "${command}" >/dev/null; then
         flag_dependency_check_failed=true
         printf \
-            'Error: Unable to locate the "%s" command in the command search PATHs.\n' \
+            'Error: This program requires the "%s" command to be available in your command search PATHs.\n' \
             "${command}" \
             1>&2
     fi
 done
 if test "${flag_dependency_check_failed}" == true; then
     printf \
-        'Error: Dependency check failed, please check your installation.\n' \
+        'Error: Required command check failed, please check your installation.\n' \
         1>&2
     exit 1
 fi
