@@ -47,7 +47,7 @@ fi
 if test -v BASH_SOURCE; then
     printf \
         'Info: Configuring the convenience variables...\n'
-    # Convenience variables
+    # Convenience variables may not need to be referenced
     # shellcheck disable=SC2034
     {
         printf \
