@@ -75,4 +75,13 @@ fi
 }
 
 printf \
+    'Info: Setting the ERR trap...\n'
+if ! trap trap_err ERR; then
+    printf \
+        'Error: Unable to set the ERR trap.\n' \
+        1>&2
+    exit 1
+fi
+
+printf \
     'Info: Operation completed without errors.\n'

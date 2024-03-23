@@ -23,4 +23,13 @@ if ! set "${set_opts[@]}"; then
 fi
 
 printf \
+    'Info: Setting the ERR trap...\n'
+if ! trap 'printf "Error: The program has encountered an unhandled error and is prematurely aborted.\\n" 1>&2' ERR; then
+    printf \
+        'Error: Unable to set the ERR trap.\n' \
+        1>&2
+    exit 1
+fi
+
+printf \
     'Info: Operation completed without errors.\n'
