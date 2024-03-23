@@ -22,6 +22,8 @@ if ! set "${set_opts[@]}"; then
     exit 1
 fi
 
+printf \
+    'Info: Checking the existence of the required commands...\n'
 required_commands=(
     realpath
 )
