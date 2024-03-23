@@ -28,6 +28,13 @@ Inherited from the [BARE-MINIMUM](#bare-minimum) flavor, but with the following 
     + `script_filename`: The full filename of the shell script
     + `script_name`: The name of the shellscript, excluding the filename suffixes
 
+## [MODULAR](modular.sh)
+
+Inherited from the [BASIC](#basic) flavor, but with the following additions:
+
+* The introduction of the `init` function, which enables the moving of the program's main logic to the start of the script file, increases readability.
+* A new `trap_err` function has being implemented to handle the ERR trap so one can immediately recognize that an error has occurred when the `errexit` interpreter behavior is triggered.
+
 ## References
 
 * [The Common / The Common GNU Bash Shell Script Templates · GitLab](https://gitlab.com/the-common/bash-script-templates)  
