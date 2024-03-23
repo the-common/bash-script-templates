@@ -9,7 +9,7 @@ Ready-to-use bash shell script templates at your fingertips!
 
 This product provides several _flavors_ of the Bash script template to satisfy different needs:
 
-### [PRIMITIVE](primitive.sh)
+### [BARE-MINIMUM](bare-minimum.sh)
 
 The considered to be the bare-minimum for bash scripting:
 
@@ -19,7 +19,7 @@ The considered to be the bare-minimum for bash scripting:
 
 ### [BASIC](basic.sh)
 
-Inherited from the [PRIMITIVE](#primitive) flavor, but with the following additions:
+Inherited from the [BARE-MINIMUM](#bare-minimum) flavor, but with the following additions:
 
 * Runtime dependency detection(check whether all the required commands are available from the command search PATHs
 * The following convenience variable definitions:
