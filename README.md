@@ -1,4 +1,4 @@
-# The Common GNU Bash Shell Script Templates
+# The common GNU Bash shell script templates
 
 Ready-to-use bash shell script templates at your fingertips!
 
@@ -39,9 +39,9 @@ Inherited from the [BASIC](#basic) flavor, but with the following additions:
 
 ## References
 
-* [The Common / The Common GNU Bash Shell Script Templates · GitLab](https://gitlab.com/the-common/bash-script-templates)  
+* [The Common / The common GNU Bash shell script templates · GitLab](https://gitlab.com/the-common/bash-script-templates)  
   The project's main site
-* [Issues · The Common / The Common GNU Bash Shell Script Templates · GitLab](https://gitlab.com/the-common/bash-script-templates/-/issues)  
+* [Issues · The Common / The common GNU Bash shell script templates · GitLab](https://gitlab.com/the-common/bash-script-templates/-/issues)  
   The project's issue tracker
 * [the-common/bash-script-templates: (MIRRORED FROM GITLAB) Ready-to-use bash shell script templates at your fingertips!](https://github.com/the-common/bash-script-templates)  
   The GitHub Git repository mirror project
