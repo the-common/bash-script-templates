@@ -21,3 +21,6 @@ if ! set "${set_opts[@]}"; then
         1>&2
     exit 1
 fi
+
+printf \
+    'Info: Operation completed without errors.\n'

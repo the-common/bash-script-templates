@@ -67,3 +67,6 @@ if test -v BASH_SOURCE; then
         script_name="${script_filename%%.*}"
     }
 fi
+
+printf \
+    'Info: Operation completed without errors.\n'
