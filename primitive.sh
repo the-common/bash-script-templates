@@ -15,7 +15,7 @@ set_opts=(
 )
 if ! set "${set_opts[@]}"; then
     printf \
-        'Error: Unable to set the defensive interpreter behavior.\n' \
+        'Error: Unable to set the defensive interpreter behaviors.\n' \
         1>&2
     exit 1
 fi
