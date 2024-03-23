@@ -45,14 +45,23 @@ if test "${flag_required_command_check_failed}" == true; then
 fi
 
 if test -v BASH_SOURCE; then
+    printf \
+        'Info: Configuring the convenience variables...\n'
     # Convenience variables
     # shellcheck disable=SC2034
     {
-        script="$(
+        printf \
+            'Info: Determining the absolute path of the program...\n'
+        if ! script="$(
             realpath \
                 --strip \
                 "${BASH_SOURCE[0]}"
-        )"
+            )"; then
+            printf \
+                'Error: Unable to determine the absolute path of the program.\n' \
+                1>&2
+            exit 1
+        fi
         script_dir="${script%/*}"
         script_filename="${script##*/}"
         script_name="${script_filename%%.*}"
