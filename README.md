@@ -27,6 +27,8 @@ Inherited from the [BARE-MINIMUM](#bare-minimum) flavor, but with the following 
     + `script_dir`: The absolute path of the directory that contains the shell script
     + `script_filename`: The full filename of the shell script
     + `script_name`: The name of the shellscript, excluding the filename suffixes
+    + `script_basecommand`: The base command(without arguments) when running the script
+    + `script_args`: An array containing all the command-line arguments when running the script
 
 ## [MODULAR](modular.sh)
 

@@ -67,6 +67,12 @@ if test -v BASH_SOURCE; then
         script_name="${script_filename%%.*}"
     }
 fi
+# Convenience variables may not need to be referenced
+# shellcheck disable=SC2034
+{
+    script_basecommand="${0}"
+    script_args=("${@}")
+}
 
 printf \
     'Info: Operation completed without errors.\n'
