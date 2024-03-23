@@ -27,17 +27,17 @@ printf \
 required_commands=(
     realpath
 )
-flag_dependency_check_failed=false
+flag_required_command_check_failed=false
 for command in "${required_commands[@]}"; do
     if ! command -v "${command}" >/dev/null; then
-        flag_dependency_check_failed=true
+        flag_required_command_check_failed=true
         printf \
             'Error: This program requires the "%s" command to be available in your command search PATHs.\n' \
             "${command}" \
             1>&2
     fi
 done
-if test "${flag_dependency_check_failed}" == true; then
+if test "${flag_required_command_check_failed}" == true; then
     printf \
         'Error: Required command check failed, please check your installation.\n' \
         1>&2
