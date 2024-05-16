@@ -79,14 +79,13 @@ fi
     script_args=("${@}")
 }
 
+printf \
+    'Info: Setting the ERR trap...\n'
 trap_err(){
     printf \
         'Error: The program has encountered an unhandled error and is prematurely aborted.\n' \
         1>&2
 }
-
-printf \
-    'Info: Setting the ERR trap...\n'
 if ! trap trap_err ERR; then
     printf \
         'Error: Unable to set the ERR trap.\n' \
