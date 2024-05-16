@@ -49,9 +49,9 @@ if test "${flag_required_command_check_failed}" == true; then
     exit 1
 fi
 
+printf \
+    'Info: Configuring the convenience variables...\n'
 if test -v BASH_SOURCE; then
-    printf \
-        'Info: Configuring the convenience variables...\n'
     # Convenience variables may not need to be referenced
     # shellcheck disable=SC2034
     {
