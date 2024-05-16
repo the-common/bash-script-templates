@@ -76,6 +76,12 @@ fi
 
 printf \
     'Info: Setting the ERR trap...\n'
+trap_err(){
+    printf \
+        'Error: The program prematurely terminated due to an unhandled error.\n' \
+        1>&2
+    exit 99
+}
 if ! trap trap_err ERR; then
     printf \
         'Error: Unable to set the ERR trap.\n' \
